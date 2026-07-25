@@ -2,7 +2,6 @@ package school.sorokin.reservation_system;
 
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ReservationService {
 
     private final Map<Long, Reservation> reservationMap;
-    private AtomicLong idCounter;
+    private final AtomicLong idCounter;
 
     public ReservationService() {
         reservationMap = new HashMap<>();
